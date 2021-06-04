@@ -1,5 +1,6 @@
 package manageStudent;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Student {
@@ -70,12 +71,18 @@ public class Student {
         this.score = score;
     }
 
+    public int getAge(){
+        String[] dateOfBrith = getDateOfBirth().split("-");
+        int age = LocalDate.now().getYear() - Integer.parseInt(dateOfBrith[2]);
+        return age;
+    }
+
     @Override
     public String toString() {
         return "Student{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
+                ", age=" + getAge() +
                 ", address='" + address + '\'' +
                 ", email='" + email + '\'' +
                 ", score=" + score +

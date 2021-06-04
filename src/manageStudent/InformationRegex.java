@@ -4,7 +4,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class InformationRegex {
-    public static final String DATE_OF_BIRTH = "^[0-3][0-9][-][0-1][0-2][-][0-9]{4}$";
+    public static final String DATE_OF_BIRTH = "^((0\\d|[1-2]\\d|3[0-1])-(0\\d|1[0-2])-[1-2]\\d{3})$";
     public static final String EMAIL = "^[a-z]{1,}.[a-z]{1,}@codegym.vn$";
     public static final String ID = "^C[1-9]{4}[GHIK][1-9]{2}$";
 
